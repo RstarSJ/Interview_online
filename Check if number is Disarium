@@ -1,0 +1,17 @@
+import math
+def Disarium(n):
+    n1=n
+    count_digits = len(str(n))
+    sum=0
+    while (n!=0):
+        a=n%10
+        sum=int(sum+math.pow(a,count_digits))
+        count_digits=count_digits-1
+        n=n//10
+    
+    if sum == n1:
+        return 1
+    else:
+        return 0
+num=int(input())
+print(Disarium(num))
